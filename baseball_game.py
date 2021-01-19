@@ -25,8 +25,8 @@ def is_between_100_and_999(user_input_number):
 
 
 def is_duplicated_number(three_digit):
-    if len(set(three_digit)) != 3: result = False
-    else: result = True
+    if len(set(three_digit)) != 3: result = True
+    else: result = False
     # ==================================
     return result
 
@@ -34,7 +34,7 @@ def is_duplicated_number(three_digit):
 def is_validated_number(user_input_number):
     if is_digit(user_input_number):
         if(is_between_100_and_999(user_input_number)):
-            if(is_duplicated_number(user_input_number)):
+            if not is_duplicated_number(user_input_number):
                 return  True
     # ==================================
     return False
@@ -42,7 +42,7 @@ def is_validated_number(user_input_number):
 
 def get_not_duplicated_three_digit_number():
     a = get_random_number()
-    while not is_duplicated_number(str(a)):
+    while is_duplicated_number(str(a)):
         a = get_random_number()
     # ==================================
     return a
