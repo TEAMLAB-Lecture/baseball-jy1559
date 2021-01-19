@@ -56,7 +56,8 @@ def get_strikes_or_ball(user_input_number, random_number):
             if random_number[i] == a: result[0] += 1
             else: result[1] += 1
     return result
-
+ #a
+ #b
 
 def is_yes(one_more_input):
     if one_more_input.lower() == 'y' or one_more_input.lower() == 'yes': result = True
