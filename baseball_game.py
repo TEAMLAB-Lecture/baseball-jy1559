@@ -42,8 +42,8 @@ def is_validated_number(user_input_number):
 
 def get_not_duplicated_three_digit_number():
     a = get_random_number()
-    while not is_validated_number(str(a)):
-        a = get_random_number
+    while not is_duplicated_number(str(a)):
+        a = get_random_number()
     # ==================================
     return a
 
@@ -66,7 +66,6 @@ def is_yes(one_more_input):
 def is_no(one_more_input):
     if one_more_input.lower() == 'n' or one_more_input.lower() == 'no': result = True  
     else: result = False
-    # ==================================
     return result
 
 
